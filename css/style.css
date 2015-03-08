@@ -1,0 +1,198 @@
+#main-content {
+
+/* Use background-color and gradient */
+
+    font-family: Arial, sans-serif;
+    margin: auto;
+    height: 312px;
+    width: 312px;
+
+    border-radius: 0 0 10px 10px;
+    
+    -webkit-box-shadow: 3px 3px 5px 0 rgba(201, 201, 201, 0.75);
+    -moz-box-shadow:    3px 3px 5px 0 rgba(201, 201, 201, 0.75);
+    box-shadow:         3px 3px 5px 0 rgba(201, 201, 201, 0.75);
+}
+
+.sprite { background: url('../img/sprite.png') no-repeat top left; width: 68px; height: 26px;  }
+.sprite.btn_ic_gray_left { background-position: 0 0; width: 12px; height: 10px; } 
+.sprite.btn_ic_gray_right { background-position: 0 -20px; width: 12px; height: 10px; } 
+.sprite.arrow_find { background-position: 0 -40px; width: 12px; height: 10px; } 
+.sprite.button_bg_white_left { background-position: 0 -96px; } 
+.sprite.button_bg_white_left:hover { background-position: 0 -60px; }
+.sprite.button_bg_white_right { background-position: 0 -168px; } 
+.sprite.button_bg_white_right:hover { background-position: 0 -132px; }
+.sprite.button_find_bg_white_right { background-position: 0 -240px; width: 116px; }
+.sprite.button_find_bg_white_right:hover { background-position: 0 -204px; width: 116px; }
+.sprite.comp_plate_graybasic { background-position: 0 -274px; width: 323px; height: 337px; } 
+
+.sprite-product { background: url('../img/sprite_product.png') no-repeat top left; width: 312px; height: 200px;  } 
+.sprite-product.comp_plate_promo1 { background-position: 0 0; } 
+.sprite-product.comp_plate_promo2 { background-position: 0 -210px; } 
+.sprite-product.comp_plate_promo3 { background-position: 0 -420px; } 
+.sprite-product.comp_plate_promo4 { background-position: 0 -630px; } 
+
+
+.image {
+    height: 200px;    
+}
+
+/*====== wrapper ================*/
+.wrapper {
+    margin-left: 15px;
+}
+
+.header {
+    color: #fd741e;
+    font-size: 20px;
+}
+
+.body {
+    margin-top: 5px;
+    font-size: 12px;
+    height: 25px;
+    overflow: hidden;
+}
+
+.note {
+    margin-top: 5px;
+    color: #837c83;
+}
+
+.show-details, .hide-details {
+    margin-top: 5px; 
+    color: #fd741e;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hide-details {
+    display: none;
+}
+
+.show-details:hover, .hide-details:hover {
+    color: #c26100;
+}
+
+/*======= footer ===============*/
+.navigation {
+    margin: 15px 0 0 10px;
+}
+
+.previous, .next, .find {
+    display: inline-block;
+}
+
+.previous, .next {
+    height: 26px;
+    width: 68px;
+}
+
+.find {
+    height: 26px;
+    width: 116px;
+    margin-left: 32px;
+}
+
+.previous:hover > span, .next:hover > span, .find:hover > span {
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    cursor: pointer;
+}
+
+.previous-arrow, .next-arrow ,.find-arrow  {
+    position: relative;
+    top: 4px;
+}
+
+.previous-arrow {
+    padding-left: 10px;
+    margin: 10px 0px 0px 5px;
+}
+
+.next-arrow {
+    padding-left: 12px;
+    left: 4px;
+}
+
+.find-arrow {
+    padding-left: 10px;
+    left: 6px;
+}
+
+.previous-text, .next-text, .find-text{
+    display: inline-block;
+    padding: 7px 3px 3px 10px;
+    font-size: 14px;
+    color: #837c83;
+}
+
+.find-text {
+    padding: 7px 3px 3px 4px;
+    color: #fd741e;
+    font-weight: bold;
+}
+
+/*======== custom animate ==============*/
+.custom-animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+@-webkit-keyframes customFadeIn {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.customFadeIn {
+    -webkit-animation-name: customFadeIn;
+    animation-name: customFadeIn;
+}
+
+.custom-header {
+   padding-top: 15px; 
+}
+
+.body {
+    transition: height 0.8s;
+
+    -webkit-transition: height 0.8s;
+    -moz-transition: height 0.8s;
+    -o-transition: height 0.8s;
+    transition: height 0.8s;
+}
+
+.custom-body {
+    height: 210px;
+}
+
+.image, .sprite-product {
+    transition: opacity 0.8s;
+
+    -webkit-transition: opacity 0.8s;
+    -moz-transition: opacity 0.8s;
+    -o-transition: opacity 0.8s;
+    transition: opacity 0.8s; 
+}
