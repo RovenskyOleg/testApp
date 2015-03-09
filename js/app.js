@@ -1,10 +1,6 @@
 'use strict';
 
-<<<<<<< HEAD
 var advertisingContent = function(options) {
-=======
-var myModule = function(options) {
->>>>>>> 6512e5947725d4ae8e7e6fd6f331f41cae0cba89
     var params = options || {},
         cachedData = [],               
 
@@ -101,11 +97,7 @@ var myModule = function(options) {
 };
 
 $(function() {
-<<<<<<< HEAD
     var content = new advertisingContent({
-=======
-    var activeModule = new myModule({
->>>>>>> 6512e5947725d4ae8e7e6fd6f331f41cae0cba89
         next: '.next',
         previous: '.previous',
         find: '.find',
@@ -119,9 +111,5 @@ $(function() {
         wrapper: '.wrapper'
     });
 
-<<<<<<< HEAD
     content.result();
-=======
-    activeModule.result();
->>>>>>> 6512e5947725d4ae8e7e6fd6f331f41cae0cba89
 });
