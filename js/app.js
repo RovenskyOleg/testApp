@@ -61,7 +61,11 @@ var advertisingContent = function(options) {
 
                     el.body.removeClass('custom-body');
                     el.header.removeClass('custom-header');
-                    el.image.addClass('sprite-product image'); 
+
+                    setTimeout(function() {
+                          el.image.addClass('sprite-product image'); 
+                    }, 800);
+                    
 
                     el.showDetails.removeClass('close');
                     el.showDetails.show();
