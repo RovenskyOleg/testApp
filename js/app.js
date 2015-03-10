@@ -18,24 +18,24 @@ var advertisingContent = function(options) {
             wrapper: $(params.wrapper)
         },
 
-        helper = new Helper(el, cachedData),
-        facade = new Facade(cachedData, helper),                      
+        navigation = new Navigation(el, cachedData),
+        facade = new Facade(cachedData, navigation),                      
 
         events = {
             previous: function() {
-                helper.animate(el.wrapper);
+                navigation.animate(el.wrapper);
                 
-                helper.goPrevious();
+                navigation.goPrevious();
 
-                helper.fadeImg();
+                navigation.fadeImg();
             },
 
             next: function() {
-                helper.animate(el.wrapper);
+                navigation.animate(el.wrapper);
 
-                helper.goNext();
+                navigation.goNext();
 
-                helper.fadeImg();
+                navigation.fadeImg();
             },
 
             find: function() {

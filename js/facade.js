@@ -1,9 +1,9 @@
 'use strict';
 
-function Facade(cachedData, helper) {
+function Facade(cachedData, nav) {
     var init = function() {
-        helper.setData(cachedData[0]);
-        helper.cached(cachedData);
+        nav.setData(cachedData[0]);
+        nav.cached(cachedData);
     };
 
     this.getResult = function(uri) {
