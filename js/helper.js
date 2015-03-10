@@ -6,12 +6,22 @@ function Helper(el, cachedData) {
             position: 0            
         }; 
 
+    var page = function() {
+        var numberOfPage = cachedData.length;
+
+        if (settings.position < 0) {
+            settings.position = numberOfPage - 1;
+        } else if (settings.position > (numberOfPage - 1)) {
+            settings.position = 0;
+        }
+        return settings.position
+    };
+
     this.cached = function(data) {
         cachedData = data;
     };
 
-    this.setData = function(options) {
-        
+    this.setData = function(options) {    
         var data = options || {},
             classImg = (data.img).match(/([\w,\s-]+)\.[A-Za-z]{3}/)[1] || '';
            
@@ -27,17 +37,6 @@ function Helper(el, cachedData) {
             el.image.removeClass(cachedImg[0]);
             cachedImg.shift();           
         }; 
-    };
-
-    var page = function() {
-        var numberOfPage = cachedData.length;
-
-        if (settings.position < 0) {
-            settings.position = numberOfPage - 1;
-        } else if (settings.position > (numberOfPage - 1)) {
-            settings.position = 0;
-        }
-        return settings.position
     };
 
     this.goNext = function() {
@@ -68,7 +67,7 @@ function Helper(el, cachedData) {
         element.addClass(animationName).one(animationEnd, function() {
             element.removeClass(animationName);
         });
-    }
+    };
 
     return this;
 }

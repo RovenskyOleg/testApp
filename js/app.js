@@ -60,12 +60,12 @@ var advertisingContent = function(options) {
                     el.hideDetails.addClass('close');
 
                     el.body.removeClass('custom-body');
-                    el.header.removeClass('custom-header');
+                    
 
                     setTimeout(function() {
-                          el.image.addClass('sprite-product image'); 
-                    }, 800);
-                    
+                          el.image.addClass('sprite-product image');
+                          el.header.removeClass('custom-header'); 
+                    }, 800);                    
 
                     el.showDetails.removeClass('close');
                     el.showDetails.show();
@@ -79,20 +79,6 @@ var advertisingContent = function(options) {
     }   
 
     return {
-        // init: function() {
-        //     helper.setData(cachedData[0]);
-        // },
-        
-        // var self = this;
-        // $.get('js/responce.json', function(data) {
-        //     cachedData = data;
-        // })
-        // .done(function() {
-        //     self.init();
-        // })
-        // .fail(function() {
-        //     console.log( "error" );
-        // })
         result: function() {
             facade.getResult('js/responce.json');
             
